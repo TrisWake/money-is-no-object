@@ -10,17 +10,14 @@ if(userObj.userRole === "ADMIN"){
 }
 
 function getEmail(userObj){
-    if(userObj.firstName === "Kyle"){
-        return "krose.prsvr@gmail.com"
-    }if(userObj.firstName === "Jason"){
-        return "jdoty.prsvr@gmail.com"
-    }if(userObj.firstName === "John"){
-        return "jdoe.prsvr@gmail.com"
-    }
+    //get first initial 
+    //get last name
+    //add .prsvr@gmail.com
+    return userObj.firstName[0].toLowerCase() + userObj.lastName.toLowerCase + ".prsvr@gmail.com"
 }
 
 const getHardestHomework = function(homeworkArr){
-    if(homeworkArr.length === 0){
+     if(homeworkArr.length === 0){
         return ""
     }
     let lowestScore = homeworkArr[0]
@@ -39,17 +36,17 @@ function getPlaylistLength(playlist) {
         if (playlist.songs[i]) {
             count++;
         }
-    }
     }return count
 }
+}
 
-function createPhonebook(name, number){
+function createPhonebook(nameArr, numberArr){
     const phonebook = {};
-    for(let i = 0; i < name.number.length; i++){
-        if(numbers[i] + name[i]){
-        }phonebook++
+    for(let i = 0; i < nameArr.length; i++){
+        phonebook[nameArr[i] = numberArr[i]
     }return phonebook
 }
+
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
 // └─────────────────────────────────────┘
