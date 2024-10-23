@@ -31,20 +31,25 @@ const getHardestHomework = function(homeworkArr){
     }
     return lowestScore.name
 }
-//     let lowestScore = homeworkArr[0].averageScore
-//     let lowestName = homeworkArr[0].name
-//     //how do we access all of the values in an array?
-//     for(let i = 0; i < homeworkArr.length; i++){
-//         //access averge score
-//         //homeworkArr[i]
-//         //check to see if avg score less than other scores
-//         if(homeworkArr[i].averageScore < lowestScore){
-//             lowestScore = homeworkArr[i].averageScore
-//             lowestName = homeworkArr[i].name
-//         }
-//     }
-//     return lowestName
-// }
+
+function getPlaylistLength(playlist) {
+    let count = 0
+    if (playlist && playlist.songs){
+    for (let i = 0; i < playlist.songs.length; i++) {
+        if (playlist.songs[i]) {
+            count++;
+        }
+    }
+    }return count
+}
+
+function createPhonebook(name, number){
+    const phonebook = {};
+    for(let i = 0; i < name.number.length; i++){
+        if(numbers[i] + name[i]){
+        }phonebook++
+    }return phonebook
+}
 // ┌─────────────────────────────────────┐
 // │ Do not modify code below this line. │
 // └─────────────────────────────────────┘
