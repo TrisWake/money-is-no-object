@@ -10,41 +10,39 @@ if(userObj.userRole === "ADMIN"){
 }
 
 function getEmail(userObj){
-    //get first initial 
-    //get last name
-    //add .prsvr@gmail.com
-    return userObj.firstName[0].toLowerCase() + userObj.lastName.toLowerCase + ".prsvr@gmail.com"
+    return userObj.firstName[0].toLowerCase() + userObj.lastName.toLowerCase() + ".prsvr@gmail.com"
 }
 
 const getHardestHomework = function(homeworkArr){
-     if(homeworkArr.length === 0){
+    if(homeworkArr.length === 0){
         return ""
     }
-    let lowestScore = homeworkArr[0]
-    for(let i = 0; i < homeworkArr.length; i++){
-        if(homeworkArr[i].averageScore < lowestScore.averageScore){
-            lowestScore = homeworkArr[i]
-        }
+let lowestScore = homeworkArr[0]
+for(let i = 0; i < homeworkArr.length; i++){
+    if(homeworkArr[i].averageScore < lowestScore.averageScore){
+        lowestScore = homeworkArr[i]
     }
-    return lowestScore.name
+}
+return lowestScore.name
 }
 
 function getPlaylistLength(playlist) {
-    let count = 0
-    if (playlist && playlist.songs){
-    for (let i = 0; i < playlist.songs.length; i++) {
-        if (playlist.songs[i]) {
-            count++;
+    let count = 0;
+    if (playlist && playlist.songs) {
+        for (let i = 0; i < playlist.songs.length; i++) {
+            if (playlist.songs[i]) {
+                count++;
+            }
         }
-    }return count
+    }
+    return count
 }
-}
-
 function createPhonebook(nameArr, numberArr){
     const phonebook = {};
     for(let i = 0; i < nameArr.length; i++){
-        phonebook[nameArr[i] = numberArr[i]
-    }return phonebook
+        phonebook[nameArr[i]] = numberArr[i];
+    }
+    return phonebook;
 }
 
 // ┌─────────────────────────────────────┐
